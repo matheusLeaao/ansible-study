@@ -1,4 +1,5 @@
 ---
+sudo: yes
 Tasks:
   - Name: Install Nginx e update centOS
     yum: 
