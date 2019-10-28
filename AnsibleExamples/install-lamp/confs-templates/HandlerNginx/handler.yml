@@ -1,0 +1,10 @@
+---
+Tasks:
+  - Name: Systemctl start nginx
+    service: name=nginx state=restarted
+
+  - Name: Systemctl restart nginx
+    service: name=nginx state=reload
+  
+  - Name: Systemctl enable nginx
+    service: name=nginx enabled=yes
