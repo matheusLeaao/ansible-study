@@ -1,0 +1,11 @@
+---
+- hosts: server
+
+  become: true
+
+  tasks:
+    - shell: apt-get upgrade -y; apt-get update
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: latest

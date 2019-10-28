@@ -1,0 +1,17 @@
+---
+- name: install and start apache
+  hosts: webservers
+  remote_user: ubuntu
+  vars:
+          http_port: 80
+          max_clients: 200
+  remote_user: root
+  
+  tasks:
+          - name: install httpd
+            yum: pkg=httpd state=latest
+          - name: write te apache config file
+            template: src=/srv/httpd.j2 dest=etc/httpd.conf
+          - name: start apache
+            service: name=httpd state=started
+
