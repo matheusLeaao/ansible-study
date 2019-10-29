@@ -1,0 +1,10 @@
+---
+ - hosts: local
+   become: yes
+   user: ubuntu
+   roles:
+    - comum
+    - nginx
+    - mysql
+    - php
+    - phpmyadmin

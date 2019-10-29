@@ -1,0 +1,11 @@
+---
+sudo: yes
+Tasks:
+
+  - Name: yum update
+    action: yum name=* state=latest
+
+  - Name: install mysql
+    yum: mysql-server , mysql-client state=installed
+    
+

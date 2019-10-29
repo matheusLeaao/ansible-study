@@ -1,0 +1,19 @@
+---
+sudo: yes
+Tasks:
+
+  - Name: yum update
+    action: yum name=* state=latest
+
+  - Name: yum install epel
+    yum: name=epel-release.noarch state=latest
+
+  - Name: download remi repo rpm
+    get_url: url=http://rpms.remirepo.net/enterprise/remi-release-7.rpm dest=/root/ 
+
+  - Name: install remi repo rpm
+    yum: name=/root/remi-release-7.rpm state=present
+
+  - Name: install php
+    yum: enablerepo=remi name=php-msql , php-fpm state=latest
+

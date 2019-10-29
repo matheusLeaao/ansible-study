@@ -1,0 +1,10 @@
+---
+Tasks:
+  - Name: start mysql
+    service: name=mysql state=restarted
+
+  - Name: restart msql
+    service: name=msql state=reload
+  
+  - Name: enable msql
+    service: name=msql enabled=yes
