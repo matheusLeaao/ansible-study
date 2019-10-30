@@ -1,0 +1,12 @@
+---
+- name: instalar padrão completo
+  yum: 
+    name: "{{ packages }}" 
+  vars: 
+    packages:
+    - vim
+    - curl
+    - htop
+    - nmap
+    - git
+    - bash-completion
