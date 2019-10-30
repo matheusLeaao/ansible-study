@@ -1,7 +1,7 @@
 ---
  - hosts: server
    become: yes
-   user: ubuntu
+   user: centos
    roles:
     - comum
     - nginx
