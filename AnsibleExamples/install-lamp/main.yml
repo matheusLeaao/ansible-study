@@ -1,8 +1,8 @@
 ---
 # - hosts: server
-   become: yes
-   roles:
-    - comum
-    - nginx
-    - mysql
-    - php
+  - become: yes
+    roles:
+     - comum
+     - nginx
+     - mysql
+     - php
