@@ -1,5 +1,6 @@
 [server]
 localhost
+ansible_user=centos
 
 [server:vars]
 ansible_user=centos
