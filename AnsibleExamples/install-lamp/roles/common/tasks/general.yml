@@ -1,6 +1,6 @@
 ---
 - name: instalar padrão completo
-  apt: pkg={{ item }} state=latest update_cache=true
+  yum: pkg={{ item }} state=latest update_cache=true
   with_items:
       - vim
       - curl

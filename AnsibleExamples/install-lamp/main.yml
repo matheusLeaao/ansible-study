@@ -1,8 +1,8 @@
 ---
- - hosts: local
+ - hosts: server
    become: yes
    roles:
-    - comum
+    #- common
     - nginx
     - mysql
     - php
