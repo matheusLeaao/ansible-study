@@ -1,5 +1,5 @@
 ---
-- hosts: 34.239.120.185
+- hosts: 
 
   become: true
 
