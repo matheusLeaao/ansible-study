@@ -1,8 +1,8 @@
 ---
- - hosts: server
-   become: yes
-   user: centos
-   roles:
+- hosts: server
+  become: yes
+  user: centos
+  roles:
     - common
     - nginx
     - mysql
