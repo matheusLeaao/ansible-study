@@ -2,7 +2,7 @@
  - hosts: server
    become: yes
    roles:
-    -comum
-    -nginx
-    -mysql
-    -php
+    - comum
+    - nginx
+    - mysql
+    - php
