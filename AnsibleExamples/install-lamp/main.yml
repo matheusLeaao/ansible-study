@@ -3,7 +3,7 @@
   become: yes
   user: centos
   roles:
-    - roles/common
+    - common
     - nginx
     - mysql
     - php
