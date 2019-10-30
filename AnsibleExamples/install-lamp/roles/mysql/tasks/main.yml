@@ -1,0 +1,13 @@
+---
+- name: yum update
+  action: yum name=* state=latest
+
+- name: install mysql
+  yum:
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - mysql-server
+    - mysql-client
+    
+
