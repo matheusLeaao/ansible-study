@@ -1,7 +1,7 @@
 ---
-- name: instalar padrão completo
+- Name: instalar padrão completo
   yum: 
-    name: "{{ packages }}" 
+    name: "{{ packages }}"
   vars: 
     packages:
     - vim
