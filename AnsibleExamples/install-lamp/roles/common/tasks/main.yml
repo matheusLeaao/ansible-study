@@ -1,5 +1,5 @@
 ---
-- Name: instalar padrão completo
+- name: instalar padrão completo
   yum: 
     name: "{{ packages }}"
   vars: 
