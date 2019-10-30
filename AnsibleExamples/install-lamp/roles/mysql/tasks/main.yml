@@ -9,5 +9,6 @@
     packages:
     - mysql-server
     - mysql-client
-    
+  notify:
+    - restart mysql  
 

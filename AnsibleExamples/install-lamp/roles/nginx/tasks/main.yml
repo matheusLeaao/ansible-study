@@ -9,7 +9,7 @@
     name: nginx #repositório do nginx para centos7
     state: present
   notify:
-    - start nginx
+    - restart nginx
 
 - name: Quando a instalação do Nginx falhar
   when: nginxinstalled|failed
