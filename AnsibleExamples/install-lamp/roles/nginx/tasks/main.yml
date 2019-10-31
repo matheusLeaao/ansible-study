@@ -8,12 +8,15 @@
   yum: 
     name: nginx #repositório do nginx para centos7
     state: present
+  notify:
+  - start nginx
+  tags: nginx
 
 - name: configuração do Nginx
   template: 
     src: confs-templates/nginx.conf.j2 
     dest: /etc/nginx/nginx.conf 
-    mode: 0644 #permissão igual do desafio
+    #mode: 0644 permissão igual do desafio
   notify:
-    - start nginx
+    - restart nginx
   tags: nginx  

@@ -1,6 +1,14 @@
 ---
 - name: start nginx
+  become: yes
+  service:
+    name: nginx.service
+    shell: systemctl start nginx
+    enabled: yes
+
+- name: restart nginx
+  become: yes
   service:
     name: nginx
-    state: restarted
+    shell: systemctl restart nginx
     enabled: yes

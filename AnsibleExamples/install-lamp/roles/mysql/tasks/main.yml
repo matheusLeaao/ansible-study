@@ -10,5 +10,5 @@
     - mysql-server
     - mysql-client
   notify:
-    - restart mysql  
+    - start mysql  
 
