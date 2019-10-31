@@ -19,4 +19,5 @@
     #mode: 0644 permissão igual do desafio
   notify:
     - restart nginx
+    - enable nginx
   tags: nginx  
