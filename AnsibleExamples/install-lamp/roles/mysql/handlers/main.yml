@@ -1,6 +1,12 @@
 ---
 - name: start mysql
   service: 
-    name: mysql
-    state: started
-    enabled: yes
+    shell: systemctl start mysql
+
+- name: restart mysql
+  service: 
+    shell: systemctl restart mysql
+
+- name: enable mysql
+  service: 
+    shell: systemctl enable mysql

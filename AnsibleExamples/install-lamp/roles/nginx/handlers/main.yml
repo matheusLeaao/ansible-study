@@ -9,4 +9,4 @@
 
 - name: enable nginx
   become: yes
-  shell: systemctl enabled nginx
+  shell: systemctl enable nginx

@@ -1,14 +1,19 @@
 ---
-- name: yum update
-  action: yum name=* state=latest
+- name: Download repo mysql
+  yum:
+    name: http://repo.mysql.com/mysql-community-release-el7-7.noarch.rpm
+    state: present
+
+- name: initial repo
+  shell: yum -ivh mysql-community-release-el7-5.noarch.rpm
+
+- name: update
+  shell: yum update
 
 - name: install mysql
   yum:
     name: "{{ packages }}"
   vars:
     packages:
-    - mysql-server
-    - mysql-client
-  notify:
-    - start mysql  
-
+      - mysql-client
+      - mysql-server

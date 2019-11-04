@@ -4,6 +4,7 @@
   user: centos
   roles:
     #- common
-    - nginx
-    #- mysql
+    #- nginx
+    - mysql
     #- php
+    #- wordpress
