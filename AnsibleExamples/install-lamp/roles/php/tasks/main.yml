@@ -12,4 +12,16 @@
 
 - name: Install php
   yum: 
-    name: php #install php
+    name: php, php-mysql, php-fpm #install php
+  notify:
+    - start php-fpm
+  tags: php
+
+- name: configuração do php
+  template: 
+    src: confs-templates/www.conf.j2 
+    dest: /etc/php-fpm.d/www.conf
+  notify:
+    - restart php-fpm
+    - enable php-fpm
+  tags: nginx

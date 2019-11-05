@@ -1,5 +1,5 @@
 [server]
-54.196.120.1
+3.93.58.93
 
 [server:vars]
 ansible_user=centos
