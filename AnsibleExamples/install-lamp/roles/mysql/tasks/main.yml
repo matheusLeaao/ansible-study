@@ -4,16 +4,36 @@
     name: http://repo.mysql.com/mysql-community-release-el7-7.noarch.rpm
     state: present
 
-- name: initial repo
-  shell: yum -ivh mysql-community-release-el7-5.noarch.rpm
-
-- name: update
-  shell: yum update
-
 - name: install mysql
   yum:
     name: "{{ packages }}"
   vars:
     packages:
-      - mysql-client
-      - mysql-server
+      - mariadb-server
+      - mariadb
+  notify: 
+    - start mysql
+    - enable mysql
+  tags: mysql
+
+- name: copy the templates to their respestive destination
+  template: src={{ item.src }} dest={{ item.dest }} owner=root group=root mode={{ item.mode | default(644) }}
+  with_items:
+    - { src: 'my.cnf.j2', dest: '/etc/my.cnf.d/my.cnf' }
+    - { src: 'root.cnf.j2', dest: '~/.my.cnf', mode: '600' }
+  notify:
+    - restart mysql
+
+- name: Create WordPress database
+  mysql_db: name="{{ wp_mysql_db }}"
+            state=present
+            login_user="desafio"
+            login_password="desafio"
+
+- name: Create WordPress DB user and grant permissions to WordPress DB
+  mysql_user: name="desafio"
+              password="desafio"
+              priv="desafio.*:ALL"
+              state=present
+              login_user="desafio"
+              login_password="desafio"

@@ -10,3 +10,4 @@
     - nmap
     - git
     - bash-completion
+    - MySQL-python
