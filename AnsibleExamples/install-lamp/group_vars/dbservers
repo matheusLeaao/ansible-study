@@ -1,0 +1,6 @@
+[dbservers]
+mysqlservice: mysqld
+mysql_port: 3306
+dbuser: desafio
+dbname: desafio
+upassword: desafio123
