@@ -1,8 +1,8 @@
 ---
-#- name: install wordpress
-#  get_url: 
-#    url: https://wordpress.org/latest.tar.gz 
-#    dest: /tmp/wordpress.tar.gz
+- name: install wordpress
+  get_url: 
+    url: https://wordpress.org/latest.tar.gz 
+    dest: /tmp/wordpress.tar.gz
 
 - name: criar dir 
   file:

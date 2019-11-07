@@ -5,9 +5,5 @@
   vars: 
     packages:
     - vim
-    - curl
-    - htop
-    - nmap
     - git
-    - bash-completion
     - MySQL-python

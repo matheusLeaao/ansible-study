@@ -20,6 +20,14 @@
     - enable mysql
   tags: mysql
 
+- name: Create Mysql configuration file to ETC
+  become: yes
+  template: src=my.cnf.j2 dest=/etc/my.cnf mode=0600
+  notify: 
+    - start mysql
+    - enable mysql
+  tags: mysql
+
 - name: Create a database to Wordpress
   mysql_db:
     name: db_desafio
