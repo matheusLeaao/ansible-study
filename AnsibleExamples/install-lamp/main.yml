@@ -3,8 +3,8 @@
   become: yes
   user: centos
   roles:
-    #- common
-    #- php
-    #- nginx
-    #- wp
+    - common
+    - php
+    - nginx
+    - wp
     - mysql

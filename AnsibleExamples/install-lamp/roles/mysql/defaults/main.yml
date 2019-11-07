@@ -1,4 +1,7 @@
 ---
-wp_mysql_db: desafio
-wp_mysql_user: desafio
-wp_mysql_password: desafio
+wordpress_mysql_enabled: true
+
+wordpress_database: desafio
+wordpress_user: root
+wordpress_password: desafio
+wordpress_host: localhost
