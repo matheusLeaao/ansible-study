@@ -16,9 +16,17 @@
     dest: /usr/share/nginx/html/wordpress/ #mando o arquivo para o diretório 
     copy: no
 
-- name: Create wp-config.php configuration file
+- name: criar file
   become: yes
-  template: src=wp-config.php.j2 dest=/usr/share/nginx/html/wordpress/wordpress/wp-config.php mode=0600
+  command: /usr/share/nginx/html/wordpress/wordpress/wp-config.php state=touch
+  args:
+    creates: /usr/share/nginx/html/wordpress/wordpress/wp-config.php
+
+- name: configuração do wp
+  become: yes
+  template: 
+    src: confs-templates/wp-config.php.j2 
+    dest: /usr/share/nginx/html/wordpress/wordpress/wp-config.php 
 
 - name: start nginx
   become: yes
