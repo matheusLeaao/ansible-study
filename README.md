@@ -1,4 +1,10 @@
 # ansible-study
+
+# Credenciais WP
+	## BD: db_desafio
+	## userDB: desafio
+	## passDB: desafio
+	
 * Repositório dedicado com a finalidade de estudo do Ansible. Proposto como Desafio pelo Diogo Lima
 * yum update
 * yum install epel-release yum-utils
@@ -42,7 +48,4 @@
             include fastcgi_params;
         }
 	
-	# Credenciais WP
-	## BD: db_desafio
-	## userDB: desafio
-	## passDB: desafio
+	
