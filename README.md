@@ -41,3 +41,8 @@
             fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
             include fastcgi_params;
         }
+	
+	# Credenciais WP
+	## BD: db_desafio
+	## userDB: desafio
+	## passDB: desafio
