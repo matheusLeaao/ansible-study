@@ -31,7 +31,6 @@
     wordpress_mysql_enabled == true
   tags: desafio
 
-
 - name: Create Wordpress user into MySQL
   mysql_user:
     name: desafio
