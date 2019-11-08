@@ -22,7 +22,7 @@
 
 - name: Start mysql.service
   become: yes
-  shell: sudo systemctl restart mysqld && sudo systemctl enable mysqld
+  shell: sudo systemctl restart mysqld
 
 - name: Create a database to Wordpress
   mysql_db:

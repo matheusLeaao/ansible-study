@@ -21,4 +21,4 @@
 
 - name: Start php-fpm.service
   become: yes
-  shell: sudo systemctl restart php-fpm && sudo systemctl enable php-fpm
+  shell: sudo systemctl restart php-fpm
