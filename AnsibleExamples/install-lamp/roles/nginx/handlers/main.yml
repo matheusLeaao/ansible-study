@@ -1,12 +1,20 @@
 ---
-- name: start nginx
-  become: yes
-  shell: systemctl start nginx
-
 - name: restart nginx
-  become: yes
-  shell: systemctl restart nginx
+  service:
+    name: nginx
+    state: restarted
+    enabled: yes
 
-- name: enable nginx
-  become: yes
-  shell: systemctl enable nginx
+
+#- name: start nginx
+#  shell: sudo systemctl start nginx
+#  tags: nginx
+#
+#- name: restart nginx
+#  become: yes
+#  shell: systemctl restart nginx
+#  
+#
+#- name: enable nginx
+#  become: yes
+#  shell: systemctl enable nginx

@@ -7,17 +7,14 @@
 - name: Install Nginx
   yum: 
     name: nginx #repositório do nginx para centos7
-    state: present
-  notify:
-  - start nginx
-  tags: nginx
+    state: present  
 
 - name: configuração do Nginx
   template: 
     src: confs-templates/nginx.conf.j2 
     dest: /etc/nginx/nginx.conf 
     #mode: 0644 permissão igual do desafio
-  notify:
-    - restart nginx
-    - enable nginx
-  tags: nginx  
+
+- name: Start Nginx.service
+  become: yes
+  shell: sudo systemctl restart nginx && sudo systemctl enable nginx
