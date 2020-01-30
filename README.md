@@ -1,11 +1,22 @@
-# ansible-study
+# Matheus Lion
+
+### Celular: 
++55 (11) 9 6484-5375
+
+### Facebook: 
+https://www.facebook.com/matheus.leao.5?ref=bookmarks
+
+### LinkedIn: 
+https://www.linkedin.com/in/matheus-le%C3%A3o-622151162/
+
+## Repositório voltado a: 
+Estudo Ansible. Dedicado com a finalidade de estudo do Ansible. Proposto como Desafio pelo Diogo Lima
 
 # Credenciais WP
 	## BD: db_desafio
 	## userDB: desafio
 	## passDB: desafio
 	
-* Repositório dedicado com a finalidade de estudo do Ansible. Proposto como Desafio pelo Diogo Lima
 * yum update
 * yum install epel-release yum-utils
 * yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm 
